@@ -9,10 +9,8 @@ setTimeout(() => {
 setTimeout(() => console.log('macro-task-queue-cb-2'), 0);
 
 /*
-* Draining microtasks amortizes the native-to-JS entry cost,
-* improves cache locality, prevents stack blowups from recursive
-* microtasks, and enforces deterministic scheduling — all of which
-* significantly improve performance.
+* Draining microtasks amortizes the native-to-JS entry cost and also improves few others parameteres
+* (which needs to checked), thus improves performance overall.
 * */
 for (let i = 0; i < 1000; i++) queueMicrotask(() => console.log(`micro-task-queue-cb-${i}`));
 
