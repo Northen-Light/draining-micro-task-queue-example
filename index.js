@@ -3,7 +3,7 @@
 
 setTimeout(() => {
     console.log('macro-task-queue-cb-1');
-    queueMicrotask(() => console.log('micro-task-queue-cb-100'));
+    queueMicrotask(() => console.log('micro-task-queue-cb-1000'));
 }, 0);
 
 setTimeout(() => console.log('macro-task-queue-cb-2'), 0);
